@@ -9,7 +9,7 @@ terraform {
   backend "s3" {
     bucket = "daws-remote-state"
     # key name is to specify remote state files in aws- change the key name according to infra creation
-    key    = "foreach-remotestate"
+    key    = "dynamic-remotestate"
     region = "us-east-1"
     dynamodb_table = "daws-locking"
   }
