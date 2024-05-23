@@ -2,7 +2,7 @@ resource "aws_security_group" "allow_ports" {
   name        = "allow_ports"
   description = "allow ports-22,80,8080,3306"
 
-  #terraform dynamic block for allowing multiple blocks
+  #terraform dynamic block for allowing multiple ports
   dynamic "ingress" {
     for_each = var.inbound_rules
     content {
