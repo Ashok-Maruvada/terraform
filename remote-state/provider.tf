@@ -8,12 +8,12 @@ terraform {
   }
   backend "s3" {
     # bucket name will be the AWS bucket name created in AWS
-    bucket = "daws-remote-state"
+    bucket = "devops-ashok"
     # key name is to specify remote state files in aws- change the key name according to infra creation
     key    = "use-remote-state"
     region = "us-east-1"
     #dynamodb table name created in AWS
-    dynamodb_table = "daws-locking"
+    dynamodb_table = "ashok-locking"
   }
 }
 
